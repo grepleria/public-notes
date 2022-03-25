@@ -1,0 +1,13 @@
+caption: A [[metasource|Metasource]] representing a class or course which uses multiple [[Source]]s.
+color: #ff0000
+created: 20200312153108522
+creator: soren
+icon: $:/core/images/tag-button
+modified: 20220324233129900
+modifier: soren
+tags: Meta Public
+title: Class
+tmap.id: 0a2eafdf-d487-4046-87cd-b34180089a8a
+type: text/vnd.tiddlywiki
+
+{{!!caption}}

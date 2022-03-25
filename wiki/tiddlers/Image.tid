@@ -1,0 +1,13 @@
+caption: Any image in a standard format embedded within the wiki for transclusion in other tiddlers.
+color: #ff0000
+created: 20200118044638935
+creator: soren
+icon: $:/core/images/tag-button
+modified: 20220324233131396
+modifier: soren
+tags: Meta Public
+title: Image
+tmap.id: 7f730f02-8b29-4579-b4c3-336c17a66ae6
+type: text/vnd.tiddlywiki
+
+{{!!caption}} See also [[Attachment]].

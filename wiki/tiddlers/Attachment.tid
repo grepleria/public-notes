@@ -1,0 +1,14 @@
+caption: Any embedded file that is not an [[Image]].
+color: #ff0000
+created: 20200122024451228
+creator: soren
+icon: $:/core/images/tag-button
+modified: 20220324233129338
+modifier: soren
+refexplorer-hide: yes
+tags: Meta Public
+title: Attachment
+tmap.id: 126f0a6b-53f4-4008-9d95-6685703a3336
+type: text/vnd.tiddlywiki
+
+The //Attachment// tag is applied to any file embedded within the wiki as a tiddler that is not an [[Image]].

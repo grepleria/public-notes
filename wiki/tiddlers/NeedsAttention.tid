@@ -1,0 +1,21 @@
+caption: Needing attention
+color: #fff12e
+created: 20200115231518581
+creator: soren
+icon: $:/core/images/info-button
+modified: 20220324233131767
+modifier: soren
+tags: Meta Public
+title: NeedsAttention
+tmap.id: c0e332d1-fec0-4aae-8c4b-892158cf783b
+type: text/vnd.tiddlywiki
+
+<$list filter="[<currentTiddler>!is[blank]]">
+Marks tiddlers that need some kind of work done on them not defined by another existing tag (e.g., NeedsExcision, NeedsPhotograph, [[Stub]]).
+</$list>
+
+<$list filter="[<currentTiddler>is[blank]then[true]]">
+  <$list filter="[tag[NeedsAttention]]">
+		<$link/><br>
+	</$list>
+</$list>

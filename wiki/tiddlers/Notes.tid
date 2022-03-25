@@ -1,0 +1,15 @@
+caption: Raw notes from an ephemeral or non-print source such as a lecture.
+color: #ff0000
+created: 20200512003031926
+creator: soren
+icon: $:/core/images/tag-button
+modified: 20220324233132186
+modifier: soren
+tags: Meta Public
+title: Notes
+tmap.id: 6ced337d-54bc-44e4-b006-867c6fd1783c
+type: text/vnd.tiddlywiki
+
+{{!!caption}}
+
+Notes tiddlers don't have any special naming conventions or fields.

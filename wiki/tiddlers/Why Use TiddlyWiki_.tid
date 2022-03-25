@@ -1,0 +1,45 @@
+created: 20220324195629029
+modified: 20220324230507383
+tags: tiddlywiki Public
+title: Why Use TiddlyWiki?
+tmap.id: 735e77ac-5fff-48ba-b3d4-bb3f4d36a45f
+type: text/vnd.tiddlywiki
+
+I am just learning how to set up TiddlyWiki, however, there are lots of excellent resources on this powerful notetaking solution.
+
+!! Why Not Confluence?
+
+I have used Confluence for my professional documentation, which has been an enormously powerful tool. Coupled with the ProjectDoc add-on, you can built a remarkably powerful, structured documentation system.
+
+You got features like:
+
+* Transclusions
+* Macros
+* Database lookups and filterable queries
+* Self-Hosting
+
+All-in-all a remarkably powerful tool. 
+
+However, Atlassian's is pushed to improve their bottom line, and the powers that be in their infinite wisdom decided to discontinue the Server edition and push everyone to the Cloud solution. 
+The Cloud solution does not have many of the features we have come to depend on in my organization (custom domains, Canadian data locality, Projectdoc and other add-ons which depend on deeper database integration, among others), and, as a small firm, we cannot fork over the money they demand to switch to the Datacenter Edition.
+
+Finally, I don't want to publish my personal notes on a public cloud service. I'd rather make my own security mistakes than let others make them for me.
+
+
+!! Why TiddlyWiki?
+
+TiddlyWiki supports most of the key components listed above, but perhaps most impactfully: ''it doesn't need a server to run it''.
+
+Sure, you can run it as a node.js server, but at the end of the day, someone who is unfamiliar with the solution can just double click on the .html file and get access to the information.
+
+!!! Disaster Planning and Continuity
+
+Why should we care about this? Well, the first reason is that sometimes servers die. It's crucial that documentation about that infrastructure be accessible in a crisis. Even for a homelab, where the COO goes by the title 'Mrs.', downtime //hurts//.
+
+As an additional consideration, I want to do right by my family, which means that our home infrastructure should be ''Bus-Proof''. This means that it should be understandable and maintainable if the primary custodian (me) gets hit by a bus.
+
+!!! Easy Public Publishing
+
+Part of this 'Bus-Proofing' involves ensuring that very specific portions of this private documentation are easily accessible, even when the rest of the infrastructure is down.
+
+Essentially, I want a painless way to decide 'you know what, I'm proud of the documentation I wrote for myself, let's make it public'. And then, make that happen, effortlessly. I found an excellent article on this, saved to my ArchiveBox: [[Writing everything in TiddlyWiki and publishing just the public parts|https://archivebox.tools.grepler.io/archive/1647967473.419531/index.html]]. This  workflow will be explained in greater depth in another Tiddler, but for now, I wanted to get my thoughts onto the internet.

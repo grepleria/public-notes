@@ -1,0 +1,53 @@
+VMID: 100301
+created: 20220324201903489
+modified: 20220324231904333
+tags: tiddlywiki lxc proxmox Public
+title: TiddlyWiki - Node.js Server
+tmap.id: b8b491e8-f4e8-4cc8-8eaf-93eddc1c4816
+type: text/vnd.tiddlywiki
+
+I've talked about why I selected this solution here, [[Why Use TiddlyWiki?]], but how do we implement it?
+I'm currently using an LXC container running on Proxmox. These are super lightweight and are easy to back-up, snapshot, migrate and just generally manage.
+
+I have been considering using docker, Portainer, or some other orchestration tool for this, but I decided to keep some of these central systems as  'Pets' rather than Cattle, because I want them to have as little abstraction / complexity as possible to ensure that they have as much uptime as possible.
+
+!! High-Availability and Uptime
+
+To that end, I am leveraging Proxmox's HA functionality, replicating this container to all of my proxmox hosts and configuring Proxmox HA to ensure that the VM is always in the 'running' state.
+
+!! Where to Save Your Wiki
+
+This setup was particularly simple, however, as Soren Bjornstad mentions in his book [[Grok TiddlyWiki|https://groktiddlywiki.com/read/#Installing%20TiddlyWiki]], you first need to decide how you will be saving your TiddlyWiki file(s).
+
+I have decided to use the ''built-in Node.js webserver'' and use a ''folder-based'' storage approach.
+
+This site is accessible to my personally via my TailNet at [[https://wiki.tools.grepler.io/]], but is inaccessible for other users.
+
+
+
+
+
+!!! Configuration Files
+
+Since this system should persist through the ages, it's only fitting that it lives on the ArchiveBox system.
+This is based on [[https://github.com/m0wer/tiddlywiki-docker]].
+
+
+Inside the `/home/archivebox/archivebox/docker-compose.yml` file, you will see the following specification:
+
+```
+tiddlywiki:
+        image: m0wer/tiddlywiki
+        ports:
+            - "8081:8080"
+        volumes:
+            - ./tiddlywiki:/var/lib/tiddlywiki
+        restart: unless-stopped
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.tiddlywiki.rule=Host(`wiki.tools.grepler.io`)"
+            - "traefik.http.routers.tiddlywiki.entrypoints=websecure"
+            - "traefik.http.routers.tiddlywiki.tls.certresolver=acmeproxy"
+```
+
+Traefik watched the docker socket and fetches a new LetsEncrypt certificate using the AcmeProxy service, discussed elsewhere.

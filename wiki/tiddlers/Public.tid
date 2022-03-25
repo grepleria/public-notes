@@ -1,0 +1,32 @@
+color: #000001
+created: 20200507032259254
+icon: $:/core/images/globe
+modified: 20220324233133380
+refexplorer-hide: true
+tags: Public Meta
+title: Public
+tmap.id: c78288ce-1b57-45dd-bda1-435bb15e8179
+type: text/vnd.tiddlywiki
+
+All tiddlers tagged with this tag, as well as all system tiddlers, will be included in the nightly upload to https://notes.grepler.io.
+
+Tiddlers not tagged Public may still be redlinked from elsewhere in the wiki, which may be useful for establishing connections between other ideas.
+
+
+!!! How To Manually Kick Off the Publish Process
+
+Soren Bjornstad of TiddlyWiki fame has written a script which selectively extracts Tiddlers and renders them to a single HTLM file, then pushes it to GitHub Pages.
+
+[[The version of the script I am using is available in a Google Groups discussion|https://groups.google.com/g/tiddlywiki/c/cfKfrAzHZyg]].
+
+Follow the instructions in the script, namely, create your new GitHub Pages public repository and clone it into your new `./public-wiki` folder.
+
+Since I am using a Docker instance, to manually kick this off, adjust the parameters on your script so that it aligns with the name of your TiddlyWiki, then exec into the docker container like so:
+
+```
+archivebox@ArchiveBox:~/archivebox/tiddlywiki$ sudo docker exec -it archivebox_tiddlywiki_1 /bin/sh  
+/var/lib/tiddlywiki # ls
+mywiki      mywiki.old  publish.sh
+```
+
+
